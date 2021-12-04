@@ -1,3 +1,3 @@
-By Smart-OverWrite
-Creator Douge
-Attention Si tu souhaites l'utilisé il faut crédité dans le visuel le nom de douge 
+By Smart-OverWrite<br>
+Creator Douge<br>
+/!\ If you want to use it you must credit in the visual the name of douge 
